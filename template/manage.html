@@ -1,0 +1,503 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="/static/css/bootstrap/bootstrap.min.css?v=28266"
+	rel="stylesheet">
+<link href="/static/css/bootstrap/bootstrap-responsive.min.css?v=365a2"
+	rel="stylesheet">
+<link href="/static/favicon.ico?v=8d258" rel="shortcut icon">
+<style type="text/css">
+body {
+	margin: 0;
+	font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+div .div-header {
+	padding-top: 9px;
+	margin: 20px 0 10px -30px;
+	border-top: 1px solid #eeeeee;
+}
+</style>
+<script src="/static/js/jquery/jquery-1.7.2.min.js?v=39775"></script>
+<script src="/static/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+<style type="text/css"></style>
+<script src="/static/js/bootstrap/bootstrap.min.js?v=bed31"></script>
+<script src="/static/js/bootstrap/bootbox.min.js?v=bessac31"></script>
+<link href="/static/css/bootstrap/bootstrap.min.css?v=28266"
+	rel="stylesheet/less" type="text/css">
+<link href="/static/css/bootstrap/bootstrap-select.min.css?v=59afa"
+	rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	min-width: 1250px;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.nav-container {
+	padding: 19px 0;
+}
+
+#footer {
+	text-align: center;
+	border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.nav-collapse {
+	float: right;
+}
+
+.thumbnail .pic {
+	float: left;
+	margin-right: 20px;
+}
+
+.thumbnail .detail {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.center {
+	text-align: center;
+}
+
+#mainboard {
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding-left: 30px;
+	border-radius: 4px;
+	padding-bottom: 80px;
+}
+
+.accordion-group {
+	background-color: #f5f5f5;
+}
+
+.app_list_box {
+	margin-bottom: 20px;
+	font-size: 10px;
+}
+
+#accordion-left {
+	
+}
+
+.bottom_line {
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 15px;
+}
+
+.navbar .brand {
+	font-size: 18px;
+}
+</style>
+
+<title>CrawlerKeeper Management</title>
+<link rel="stylesheet" type="text/css"
+	href="/static/css/jquery/jquery-ui.css?v=58260">
+<script src="/static/js/jquery/jquery.validate.js?v=33749"></script>
+<style type="text/css">
+table.data {
+	margin-top: 10px;
+	border-collapse: collapse;
+	border: 1px solid #888;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+table.data td {
+	vertical-align: text-top;
+	padding: 5px 15px 5px 5px;
+	/*border: 1px solid #aaa;*/
+	border: 1px dashed #b4c7ef;
+}
+
+table.data th {
+	vertical-align: text-top;
+	padding: 5px 15px 5px 5px;
+	/*border: 1px solid #aaa;*/
+	border: 1px dashed #b4c7ef;
+}
+
+.red-back {
+	background-color: #bb2233;
+}
+
+#accordion-main {
+	margin-left: 0px;
+}
+</style>
+
+<title>CrawlerKeeper Management</title>
+
+</head>
+
+
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+				</a> <a class="brand" href="#">CrawlerKeeper —— Keeping your own
+					crawlers</a>
+				<div class="nav-collapse"></div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="span2">
+			<div class="row">
+				<div class="accordion affix span2" id="accordion-left">
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse"
+								data-parent="#accordion-left" href="#menu_target_1">
+								CrawlerKeeper介绍 </a>
+						</div>
+						<div id="menu_target_1" class="accordion-body collapse">
+							<div class="accordion-inner">
+
+								<ul class="nav nav-list">
+
+									<li><a href="/document#intro" style="margin-top: 7px">introduction</a></li>
+
+								</ul>
+
+								<ul class="nav nav-list">
+
+									<li><a href="/document#doc" style="margin-top: 7px">document</a></li>
+
+								</ul>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse"
+								data-parent="#accordion-left" href="#menu_target_2"> CK
+								Management </a>
+						</div>
+						<div id="menu_target_2" class="accordion-body collapse">
+							<div class="accordion-inner">
+
+								<ul class="nav nav-list">
+
+									<li><a href="/manage" style="margin-top: 7px">crawler
+											display</a></li>
+
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="span9">
+			<table class="data" style="width: 99%">
+				<thead>
+					<tr>
+						<th>crawlername</th>
+						<th>status</th>
+						<th>operator</th>
+					</tr>
+				</thead>
+				<tbody id="crawler_list_body">
+					{% for crawler in crawlerlist %}
+					<tr class="crawler_list">
+						<td><button class="btn btn-success btn-crawler"  value="{{crawler['servicename']}}">{{crawler['servicename']}}</button></a></td>
+						<td>{% if crawler['status'] == 1%} <label
+							class="label label-success">运行中</label>
+							 {% elif crawler['status'] == 2 %} <label class="label label-warning">暂停中</label>
+						</td> {% elif crawler['status'] == 0 %}
+						<label class="label label-important">已停止</label>
+						{% elif crawler['status'] == 3 %} 
+						<label class="label label-info">休眠中</label>
+						{% end %}
+						<td><button class="btn btn-info btn-crawler-start"  title="启动"><i class="icon-white icon-play" ></i></button>
+						 		<button class="btn btn-info btn-crawler-pause" title="暂停"><i class="icon-white icon-pause"></i></button>
+						 		<button class="btn btn-info btn-crawler-stop"  title="停止"><i class="icon-white icon-stop"></i></button>
+						 		<button class="btn btn-info btn-crawler-resume"  title="恢复"><i class="icon-white icon-repeat"></i></button>
+					</tr>
+					{% end %}
+				</tbody>
+			</table>
+			<div class="row-fluid" id="mainboard">
+				<div id="board1"><h3>请选择一个爬虫查看状态</h3></div>
+				<div id="board2" class="hidden">
+				<h3>运行状态</h3>
+				<ul id="display_tab" class="nav nav-tabs">
+					<li class="active"><a href="#status_info" data-toggle="tab">
+							状态集 </a></li>
+					<li><a href="#log_info" data-toggle="tab">日志集</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="status_info">
+						<div class="control-group">
+							<table class="data" style="width: 50%">
+								<tr>
+									<th>column</th>
+									<th>info</th>
+								</tr>
+								<tr>
+									<td>crawler name</td>
+									<td><label class="label label-info" id="crawler_name"></label></td>
+								</tr>
+								<tr>
+									<td>running status</td>
+									<td><label class=""  id="crawler_status"></label></td>
+								</tr>
+								<tr>
+									<td>task start time</td>
+									<td><label class="label label-info" id="crawler_start_time"></label></td>
+								</tr>
+								<tr>
+									<td>running duration time</td>
+									<td><label class="label label-info" id="crawler_duration_time"></label></td>
+								</tr>
+								<tr>
+									<td>thread working count</td>
+									<td><label class="label label-info" id="crawler_worker_count">5</label></td>
+								</tr>
+								<tr>
+									<td>task interval</td>
+									<td><label class="label label-info" id="crawler_task_interval"></label></td>
+								</tr>
+								<tr>
+									<td>unfinished tasks</td>
+									<td><label class="label label-info" id="crawler_unfinished_tasks"></label></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="tab-pane" id="log_info">
+					<div class="">
+					  <button class="btn btn-info" onclick="log_show('debug')">DEBUG</button>
+					  <button class="btn btn-info" onclick="log_show('info')">INFO</button>
+					  <button class="btn btn-info" onclick="log_show('warn')">WARNING</button>
+					  <button class="btn btn-info" onclick="log_show('error')">ERROR</button>
+					</div>
+					<div style="margin-top:20px;margin-right:20px">
+						<pre id="log_pre" class="pre-scrollable">
+						&lt;p&gt;Sample text here...&lt;/p&gt;
+						</pre>
+					</div>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	
+   $(document).ready(function(){    
+		 setInterval(reload_crawler_list,5000);//3s    
+		});
+   
+	var _focus_crawler_servicename  = null
+	
+	function reload_crawler_list(){
+		$.ajax({
+			url:"/ajax/crawlerlistrefresh",
+			type:"POST",
+			dataType:"json",
+			data: {
+			},
+			success:function(res){
+				tbody_template = ""
+				$.each(res,function(i,item){
+					//flag = res.res_status
+					crawler_template = item.crawler_template
+					crawler_name = item.crawler_name
+					status = item.running_status
+					duration_time = item.duration_time
+					start_time  = item.start_time
+					unfinished_tasks = item.unfinished_tasks
+					task_interval = item.task_interval
+					worker_count = item.worker_count
+					tbody_template += crawler_template
+					if ( _focus_crawler_servicename == crawler_name){
+						running_info_insert(crawler_name,status,duration_time,start_time,
+								unfinished_tasks,task_interval,worker_count)
+					} 
+				})
+				$('#crawler_list_body').html(tbody_template)
+			},
+			error:function(res){
+				noty({'text':'刷新失败','timeout':1000,'type':'error','layout':'bottomRight'})
+			}
+		});
+	}
+	
+	function crawler_action(servicename, action){
+		$.ajax({
+			url:"/ajax/crawlercontrolaction",
+			type:"POST",
+			dataType:"json",
+			data: {
+				"servicename":servicename,
+				"action":action
+			},
+			success:function(res){
+				flag = res.res_status
+				 if(flag){
+					noty({'text':action+" 成功",'timeout':1000,'type':'success','layout':'bottomRight'})
+				 }else{
+					noty({'text':action+" 失败",'timeout':1000,'type':'error','layout':'bottomRight'})
+				 }
+			},
+			error:function(res){
+				noty({'text':action+" 失败",'timeout':1000,'type':'error','layout':'bottomRight'})
+			}
+		});
+	}
+	
+	$('button.btn-crawler-start').live('click',function(){
+		servicename = $(this).parents('tr').children('td').children('button.btn-crawler:first').val()
+		bootbox.confirm("确认是否要重新启动?",function(result){
+			if (result){
+					action = "start"
+					crawler_action(servicename,action)
+			}
+		})
+	})
+	
+	$('button.btn-crawler-pause').live('click',function(){
+		servicename = $(this).parents('tr').children('td').children('button.btn-crawler:first').val()
+		bootbox.confirm("确认是否要暂停?",function(result){
+			if (result){
+				action = "pause"
+				crawler_action(servicename,action)
+			}
+		})
+	})
+	
+	$('button.btn-crawler-resume').live('click',function(){
+		servicename = $(this).parents('tr').children('td').children('button.btn-crawler:first').val()
+		bootbox.confirm("确认是否要从暂停恢复运行?",function(result){
+			if(result){
+				action = "resume"
+				crawler_action(servicename,action)
+			}
+		})
+	})
+	
+	$('button.btn-crawler-stop').live('click',function(){
+		servicename = $(this).parents('tr').children('td').children('button.btn-crawler:first').val()
+		bootbox.confirm("确认是否要停止运行?",function(result){
+			if(result){
+				action = "stop"
+				crawler_action(servicename,action)
+			}
+		})
+	})
+
+	function log_show(level){
+		servicename = $('#crawler_name').html()
+		$.ajax({
+			url:"/ajax/getlogshowbylevel",
+			type:"POST",
+			dataType:"json",
+			data: {
+				"servicename":servicename,
+				"level":level
+			},
+			success:function(res){
+				flag = res.res_status
+				 if(flag){
+					 log_html = ""
+					 for (var i=0 ;i<res.logs.length;i++){
+					 	log_html+=res.logs[i]
+					 }
+					 $('#log_pre').html(log_html)
+					 noty({'text':"loglevel: "+level+" 成功",'timeout':1000,'type':'success','layout':'bottomRight'})
+				 }else{
+					 noty({'text':"loglevel: "+level+" 失败",'timeout':1000,'type':'error','layout':'bottomRight'})
+				 }
+			},
+			error:function(res){
+				noty({'text':"loglevel: "+level+" 失败",'timeout':1000,'type':'error','layout':'bottomRight'})
+			}
+		});
+		
+		
+	}
+	
+
+	function running_info_insert(crawler_name,status,duration_time,start_time,
+			unfinshed_tasks,task_interval,worker_count){
+		$('#board1').addClass('hidden')
+		$('#board2').removeClass('hidden')
+		$('#crawler_name').html(crawler_name)
+		if (status == 1){
+			$('#crawler_status').attr("class","label label-success")
+			$('#crawler_status').html("运行中")
+		}else if (status == 2){
+			$('#crawler_status').attr("class","label label-warning")
+			$('#crawler_status').html("暂停中")
+		}else if (status == 0){
+			$('#crawler_status').attr("class","label label-important")
+			$('#crawler_status').html("停止中")
+		}else if (status == 3){
+			$('#crawler_status').attr("class","label label-info")
+			$('#crawler_status').html("休眠中")
+		}
+		
+		$('#crawler_name').html(crawler_name)
+		$('#crawler_start_time').html(start_time)
+		$('#crawler_duration_time').html(duration_time+"s")
+		$('#crawler_worker_count').html(worker_count)
+		$('#crawler_task_interval').html(task_interval)
+		$('#crawler_unfinished_tasks').html(unfinished_tasks)
+	}
+	
+	
+	$('button.btn-crawler').live('click',function(){
+		
+		servicename = $(this).val()
+		_focus_crawler_servicename = servicename
+		$.ajax({
+			url:"/ajax/getcrawlerinfo",
+			type:"POST",
+			dataType:"json",
+			data: {
+				"servicename":servicename,
+			},
+			success:function(res){
+				flag = res.res_status
+				 if(flag){
+					crawler_name = res.crawler_name
+					status = res.running_status
+					duration_time = res.duration_time
+					start_time  = res.start_time
+					unfinished_tasks = res.unfinished_tasks
+					task_interval = res.task_interval
+					worker_count = res.worker_count
+					running_info_insert(crawler_name,status,duration_time,start_time,
+							unfinished_tasks,task_interval,worker_count)
+					noty({'text':"获取爬虫运行状态成功",'timeout':1000,'type':'success','layout':'bottomRight'})
+				 }else{
+				 	noty({'text':"获取爬虫运行状态失败",'timeout':1000,'type':'error','layout':'bottomRight'})
+				 }
+			},
+			error:function(res){
+				noty({'text':"获取爬虫运行状态失败",'timeout':1000,'type':'error','layout':'bottomRight'})
+			}
+		});
+	})	 
+</script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="/static/css/bootstrap/bootstrap.min.css?v=28266"
+	rel="stylesheet">
+<link href="/static/css/bootstrap/bootstrap-responsive.min.css?v=365a2"
+	rel="stylesheet">
+<link href="/static/favicon.ico?v=8d258" rel="shortcut icon">
+<style type="text/css">
+body {
+	margin: 0;
+	font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+div .div-header {
+	padding-top: 9px;
+	margin: 20px 0 10px -30px;
+	border-top: 1px solid #eeeeee;
+}
+</style>
+
+<script src="/static/js/jquery/jquery-1.9.1.min.js?v=39775"></script>
+<style type="text/css"></style>
+<script src="/static/js/bootstrap/bootstrap.min.js?v=bed31"></script>
+<link href="/static/css/bootstrap/bootstrap.min.css?v=28266"
+	rel="stylesheet/less" type="text/css">
+<link href="/static/css/bootstrap/bootstrap-select.min.css?v=59afa"
+	rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	min-width: 1250px;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.nav-container {
+	padding: 19px 0;
+}
+
+#footer {
+	text-align: center;
+	border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.nav-collapse {
+	float: right;
+}
+
+.thumbnail .pic {
+	float: left;
+	margin-right: 20px;
+}
+
+.thumbnail .detail {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.center {
+	text-align: center;
+}
+
+#mainboard {
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding-left: 30px;
+	border-radius: 4px;
+	padding-bottom: 80px;
+}
+
+.accordion-group {
+	background-color: #f5f5f5;
+}
+
+.app_list_box {
+	margin-bottom: 20px;
+	font-size: 10px;
+}
+
+#accordion-left {
+	
+}
+
+.bottom_line {
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 15px;
+}
+
+.navbar .brand {
+	font-size: 18px;
+}
+</style>
+
+<title>权限列表</title>
+<link rel="stylesheet" type="text/css"
+	href="/static/css/jquery/jquery-ui.css?v=58260">
+<script src="/static/js/jquery/jquery.validate.js?v=33749"></script>
+<style type="text/css">
+table.data {
+	margin-top: 10px;
+	border-collapse: collapse;
+	border: 1px solid #888;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+table.data td {
+	vertical-align: text-top;
+	padding: 5px 15px 5px 5px;
+	/*border: 1px solid #aaa;*/
+	border: 1px dashed #b4c7ef;
+}
+
+table.data th {
+	vertical-align: text-top;
+	padding: 5px 15px 5px 5px;
+	/*border: 1px solid #aaa;*/
+	border: 1px dashed #b4c7ef;
+}
+
+.red-back {
+	background-color: #bb2233;
+}
+
+#accordion-main {
+	margin-left: 0px;
+}
+</style>
+
+<title>应用超市运营系统</title>
+
+</head>
+
+
+<body>
+<div id="wraper">	
+		<div class="well" id="login_box">
+			<div class="logo">
+				<img src="{{static_url("img/logo50.png")}}">
+      </div>
+      {% if error == True %}
+      <div class="alert alert-block">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          用户名密码不匹配
+      </div>
+      {% end %}
+      <form class="form-horizontal" id="sign-in-form" method="post" action="/login">
+        {% module xsrf_form_html() %}
+        <div class="control-group">
+          <label class="control-label" for="username">用户名</label>
+          <div class="controls">
+            <input check-type="required" required-message="用户名为空" name="name" id="username" size="30" type="text">
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <label class="control-label" for="pwd_in">密码</label>
+          <div class="controls">
+            <input check-type="required" required-message="密码为空" name="pwd" id="userpassword" size="30" type="password">
+          </div>
+        </div>
+       	
+       	<div class="controls">
+        	<input type="submit" value="登录" id="submit_in" name="submit_in" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+</div>
+</body>
+</html>

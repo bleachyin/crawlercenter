@@ -1,0 +1,385 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="/static/css/bootstrap/bootstrap.min.css?v=28266"
+	rel="stylesheet">
+<link href="/static/css/bootstrap/bootstrap-responsive.min.css?v=365a2"
+	rel="stylesheet">
+<link href="/static/favicon.ico?v=8d258" rel="shortcut icon">
+<style type="text/css">
+body {
+	margin: 0;
+	font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+div .div-header {
+	padding-top: 9px;
+	margin: 20px 0 10px -30px;
+	border-top: 1px solid #eeeeee;
+}
+</style>
+
+<script src="/static/js/jquery/jquery-1.9.1.min.js?v=39775"></script>
+<script src="/static/js/google-code-prettify/prettify.js"></script>
+<style type="text/css"></style>
+<script src="/static/js/bootstrap/bootstrap.min.js?v=bed31"></script>
+<link href="/static/css/bootstrap/bootstrap.min.css?v=28266"
+	rel="stylesheet/less" type="text/css">
+<link href="/static/css/bootstrap/bootstrap-select.min.css?v=59afa"
+	rel="stylesheet">
+<link href="/static/css/google-code-prettify/prettify.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 60px;
+	min-width: 1250px;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.nav-container {
+	padding: 19px 0;
+}
+
+#footer {
+	text-align: center;
+	border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.nav-collapse {
+	float: right;
+}
+
+.thumbnail .pic {
+	float: left;
+	margin-right: 20px;
+}
+
+.thumbnail .detail {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.center {
+	text-align: center;
+}
+
+#mainboard {
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding-left: 30px;
+	border-radius: 4px;
+	padding-bottom: 80px;
+}
+
+.accordion-group {
+	background-color: #f5f5f5;
+}
+
+.app_list_box {
+	margin-bottom: 20px;
+	font-size: 10px;
+}
+
+#accordion-left {
+	
+}
+
+.bottom_line {
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 15px;
+}
+
+.navbar .brand {
+	font-size: 18px;
+}
+</style>
+
+<title>CrawlerKeeper Document</title>
+<link rel="stylesheet" type="text/css"
+	href="/static/css/jquery/jquery-ui.css?v=58260">
+<script src="/static/js/jquery/jquery.validate.js?v=33749"></script>
+<style type="text/css">
+table.data {
+	margin-top: 10px;
+	border-collapse: collapse;
+	border: 1px solid #888;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+table.data td {
+	vertical-align: text-top;
+	padding: 5px 15px 5px 5px;
+	/*border: 1px solid #aaa;*/
+	border: 1px dashed #b4c7ef;
+}
+
+table.data th {
+	vertical-align: text-top;
+	padding: 5px 15px 5px 5px;
+	/*border: 1px solid #aaa;*/
+	border: 1px dashed #b4c7ef;
+}
+
+.red-back {
+	background-color: #bb2233;
+}
+
+#accordion-main {
+	margin-left: 0px;
+}
+</style>
+
+<title>CrawlerKeeper Document</title>
+
+</head>
+
+
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+				</a> <a class="brand" href="#">CrawlerKeeper —— Keeping your own
+					crawlers</a>
+				<div class="nav-collapse"></div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="span2">
+			<div class="row">
+				<div class="accordion affix span2" id="accordion-left">
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse"
+								data-parent="#accordion-left" href="#menu_target_1">
+								CrawlerKeeper介绍 
+								</a>
+						</div>
+						<div id="menu_target_1" class="accordion-body collapse">
+							<div class="accordion-inner">
+
+								<ul class="nav nav-list">
+
+									<li><a href="/document#intro" style="margin-top: 7px">introdution</a></li>
+
+								</ul>
+
+								<ul class="nav nav-list">
+
+									<li><a href="/document#doc" style="margin-top: 7px">document</a></li>
+
+								</ul>
+
+							</div>
+						</div>
+					</div>
+
+				<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse"
+								data-parent="#accordion-left" href="#menu_target_2"> CK Management </a>
+						</div>
+						<div id="menu_target_2" class="accordion-body collapse">
+							<div class="accordion-inner">
+
+								<ul class="nav nav-list">
+
+									<li><a href="/manage" style="margin-top: 7px">crawler display</a></li>
+
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="span9">
+			<div class="page-header">
+				<a name="intro"></a>
+				<h1><img alt="" src="/static/img/100.png">
+				CrawlerKeeper 介绍</h1>
+			</div>
+				<p><a href="#">CrawlerKeeper</a>是基于zookeeper以及thrift实现的python爬虫监控框架</p>
+				<pre>crawlerkeeper底层是基于thrift的rpc接口进行通信,当爬虫通过zookeeper注册节点被服务端获取并且响应后，爬虫客户端会根据服务器端
+在zookeeper注册节点内的thriftserver信息(ip地址以及端口号)生成相应的thriftclient,同时每个爬虫客户端生成一个thriftserver
+,crawlercenter则会针对每个注册的爬虫客户端生成对应的thriftclient,从而达到双向通信的目的。</pre>
+			<div class="page-header">
+				<h1>CrawlerKeeper 安装</h1>
+			</div>
+			<ul>
+				<li><p class="text-left"><a href="http://www.python.org/">Python2.6</a>以上</p></li>
+				<li><p class="text-left"><a href="http://thrift.apache.org/">thrift-0.9.1</a></p></li>
+				<li><p class="text-left"><a href="http://zookeeper.apache.org/">zookeeper</a></p></li>
+				<li><p class="text-left"><a href="/static/download/crawlerkeeper-0.0.2.tar.gz">crawlerkeeper-latest</a></p></li>
+				</ul>
+			<pre>
+root@root:~# tar -xzvf crawlerkeeper.tar.gz
+root@root:~# cd crawlerkeeper
+root@root:~# sudo python setup.py install
+			</pre>
+			<div class="page-header">
+				<a name="doc"></a>
+				<h1>CrawlerKeeper Document</h1>
+			</div>
+			 <h2>核心类</h2>
+				<div class="page-header">
+				<h3>crawlerkeeper.server.thriftserver</h3>
+				<h4><p class="text-info">CenterClientServer<p></h4>
+				<ul>
+					<li><strong>start(servicename)</strong>    <code>启动爬虫运行</code></li>
+					<li><strong>stop(servicename)</strong>     <code>停止爬虫运行</code></li>
+					<li><strong>pause(servicename)</strong>   <code>暂停爬虫运行</code></li>
+					<li><strong>resume(servicename)</strong>     <code>从暂停恢复爬虫运行</code></li>
+					<li><strong>get_running_info(servicename)</strong>     <code>获取爬虫状态信息</code></li>
+				</ul>
+				<h4><p class="text-info">CrawlerClientServer<p></h4>
+				<ul>
+					<li><strong>logo(servicename)</strong>    <code>收集日志</code></li>
+				</ul>
+				<h4><p class="text-info">Init Server<p></h4>
+				<code class="prettyprint lang-py">
+				<p>server1 = CrawlerClientServer("127.0.0.1",7725)</p>
+				<p>server1.start()</p>
+				<p>server2 = CenterClientServer("127.0.0.1",7726)</p>
+				<p>server2.start()</p>
+				</code>
+			</div>
+			<div class="page-header">
+				<h3>crawlerkeeper.server.thriftclient</h3>
+				<h4><p class="text-info">CenterThriftClient<p></h4>
+				<ul>
+					<li><strong>start(servicename)</strong>    <code>启动爬虫运行</code></li>
+					<li><strong>stop(servicename)</strong>     <code>停止爬虫运行</code></li>
+					<li><strong>pause(servicename)</strong>   <code>暂停爬虫运行</code></li>
+					<li><strong>resume(servicename)</strong>     <code>从暂停恢复爬虫运行</code></li>
+					<li><strong>get_running_info(servicename)</strong>     <code>获取爬虫状态信息</code></li>
+				</ul>
+				<h4><p class="text-info">CrawlerThriftClient<p></h4>
+				<ul>
+				<li><strong>logo(servicename)</strong>    <code>传送日志</code></li>
+				</ul>
+				<h4><p class="text-info">Init Client<p></h4>
+				<code class="prettyprint lang-py">
+				<p>client1 = CrawlerThriftClient("127.0.0.1",7727)</p>
+				<p>client2 = CenterThriftClient("127.0.0.1",7727)</p>
+				</code>
+			</div>
+			<div class="page-header">
+				<h3>crawlerkeeper.core.config</h3>
+				<code>load 当前指定路径的配置文件 如果没有则读取默认文件default_settings.py</code>
+				<ul>
+					<li><strong>add_start_func(func_name)</strong><code>加入爬虫启动方法的回调实例</code></li>
+				</ul>
+				<h4><p class="text-info">Init Config<p></h4>
+				<code class="prettyprint lang-py">
+				<p>from conf import settings</p>
+				<p>c_settings = CrawlerSettings(settings)</p>
+				<p>config = CrawlerConfig(c_settings)</p>
+				<p>config.add_start_func(\*your crawler start function here!*\)</p>
+				</code>
+			</div>
+			<div class="page-header">
+				<h3>crawlerkeeper.core.keeper</h3>
+				<code class="prettyprint lang-py">
+				<p>from crawlerkeeper.core.keeper import ClientKeeper,CenterKeeper</p>
+				<p>keeper1 = ClientKeeper.instance()</p>
+				<p>keeper2 = ClientKeeper.instance(settings)</p>
+				<p>keeper3 = CenterKeeper.instance(settings)</p>
+				</code>
+			</div>
+			<div class="page-header">
+				<h3>crawlerkeeper.settings.default_settings</h3>
+				<ul>
+					<li><h4><p class="text-warning">Configuration For Server</p></h4></li>
+					<li><strong>ZOOKEEPER_SERVER</strong> <p>服务器端注册的zookeeper节点地址 <code>127.0.0.1:2181</code><p></li>
+					<li><strong>ZOOKEEPER_PATH</strong><p>服务器端注册的zookeeper节点路径 <code>/mitv/crawler</code></p></li>
+					<li><strong>REDIS_SERVER_HOST</strong><p>服务器段的REDIS节点信息 <code>127.0.0.1:6379</code></p></li>
+					<li><strong>REDIS_SERVER_DB </strong><p>服务端REDIS的DB信息 <code>1</code></p></li>
+					<li><strong>THRIFT_SERVER_HOST </strong><p>服务端端 thriftserver的配置信息 <code>127.0.0.1:6888</code></p></li>
+					<li><strong>THRIFT_SERVER_NAME </strong><p>服务端端 thriftserver的名称信息 <code>crawlercenter</code></p></li>
+					
+					<li><h4><p class="text-warning">Configuration For Client</p></h4></li>
+					<li><strong>THRIFT_CLIENT_HOST</strong> <p>客户端 thriftserver 节点地址 <code>127.0.0.1:2181</code><p></li>
+					<li><strong>THRIFT_CLIENT_NAME</strong><p>客户端注册到服务端的唯一标识名称 <code>like crawler1 crawler2 ... 不同客户端之间确保名称唯一</code></p></li>
+					<li><strong>TASK_INTERVAL</strong><p> 当爬虫爬取一次任务完成后等待循环启动的时间<code>60*60 单位 s</code></p></li>
+					<li><strong>TASK_TIMEOUT </strong><p>爬虫爬去任务超时时间 <code>60*60 单位s</code></p></li>
+					<li><strong>TASK_WORKER_COUNT </strong><p>爬虫启动任务的线程数 <code>2</code></p></li>
+					<li><strong>FUTURE_WORKER_COUNT</strong><p>爬虫执行服务器回调方法任务线程数 <code>如果调用的方法过多建议设置大一些 :5</code></p></li>
+					<li><strong>LOGGING_CONFIG_LIST</strong>
+					<code>可以在LogList中自定义log</code>
+					<code class="prettyprint lang-py">
+					<p>LOGGING_CONFIG_LIST = [</p>
+					 <p> {</p>
+                	 <p>"logging.formatter":"[%(asctime)s][module:%(module)s][lineno:%(lineno)d][%(levelname)s]: %(message)s",</p>
+                	 <p>"logging.level":logging.INFO,</p>
+                	 <p>"logging.handler":logging.StreamHandler()</p>
+                	 <p>},</p>
+               	 	<p>{</p>
+                	 <p>"logging.formatter":"[%(asctime)s][module:%(module)s][lineno:%(lineno)d][%(levelname)s]: %(message)s",</p>
+                	 <p>"logging.level":logging.INFO,</p>
+                	 <p>"logging.handler":logging.handlers.TimedRotatingFileHandler(filename="thrift.log", interval = 2, backupCount=5)</p>
+                	 <p>},</p>
+                	 <p>{"logging.formatter":"[%(asctime)s][module:%(module)s][lineno:%(lineno)d][%(levelname)s]: %(message)s",</p>
+                     <p>"logging.level":logging.INFO,</p>
+                 	 <p>"logging.handler":logger.handler.ThriftHandler(),<code>#如果客户端需要配置向服务器端传送log 可以加上此配置</code></p>
+                 	 <p>"logging.thrift":True,</p>
+                 	 <p>}]</p>
+					</code>
+					</li>
+				</ul>
+			</div>
+			<div class="page-header">
+				<h1>CrawlerKeeper Use</h1>
+				<li><h3>Add sdk to your crawler</h3></li>
+				<code class="prettyprint lang-py">
+				<p>from crawlerkeeper.core.keeper import ClientKeeper</p>
+				<p>from crawlerkeeper.settings import CrawlerSettings</p>
+				<p>from crawlerkeeper.core.config import CrawlerConfig</p>
+				<br>
+				<p>c_settings = CrawlerSettings(settings)<p>
+    			<p>config = CrawlerConfig(c_settings)</p>
+    			<p>config.add_start_func(\*your crawler start function here!*\)</p>
+ 				 <p>keeper = ClientKeeper.instance()</p>
+    			<p>keeper.initialize(config)</p>
+    			<p>#finished so easy#</p>
+    			<br>
+			</code>
+			<li><h3>Add sdk to your server</h3></li>
+				<code class="prettyprint lang-py">
+				<p>from crawlerkeeper.core.keeper import CenterKeeper</p>
+				<p>from crawlerkeeper.settings import CrawlerSettings</p>
+				<p>from crawlerkeeper.core.config import CrawlerConfig</p>
+				<br>
+				<p>c_settings = CrawlerSettings(settings)<p>
+    			<p>config = CrawlerConfig(c_settings)</p>
+ 				 <p>keeper = CenterKeeper.instance()</p>
+    			<p>keeper.initialize(config)</p>
+    			<p>#finished so easy too#</p>
+    			<br>
+			</code>
+			</div>
+				<div class="page-header">
+				<h3>Author & Bug Report</h3>
+				<img alt="" src="/static/img/100.png">
+				<a href="mailto:#">dongchenxi@xiaomi.com</a>
+			</div>
+			
+		
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				prettyPrint();
+			})
+		</script>
+</body>
+</html>
